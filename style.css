@@ -1,0 +1,204 @@
+:root {
+    --primary-color: #000000; /* 黒 */
+    --accent-color: #1E8449;  /* 深緑 */
+    --text-color: #ffffff;
+    --text-color-dark: #212529;
+    --text-color-muted: #6c757d;
+    --bg-dark-2: #121212;
+    --bg-light: #ffffff;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 800; /* ExtraBold */
+}
+
+.navbar .nav-link,
+.static-cta-btn,
+.floating-cta-btn {
+    font-weight: 700; /* Bold */
+}
+
+.lead {
+    font-weight: 500; /* Medium */
+}
+
+.text-muted,
+.small {
+    font-weight: 400; /* Regular */
+}
+
+.accent-text {
+    color: var(--accent-color);
+}
+
+.bg-dark-2 {
+    background-color: var(--bg-dark-2);
+}
+
+.bg-white {
+    background-color: var(--bg-light) !important;
+}
+
+.text-dark {
+    color: var(--text-color-dark) !important;
+}
+
+.section-divider {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Header */
+.navbar {
+    background-color: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .nav-link {
+    color: var(--text-color);
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    color: var(--accent-color);
+}
+
+/* Hero Section */
+#hero h1 {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    font-size: calc(1.525rem + 3.3vw);
+}
+@media (min-width: 1200px) {
+    #hero h1 {
+        font-size: 4rem;
+    }
+    #hero .hero-img {
+        width: 60%;
+        margin: 0 auto;
+    }
+}
+
+/* Static CTA Button */
+.static-cta-btn {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 15px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(30, 132, 73, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.static-cta-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 25px rgba(30, 132, 73, 0.5);
+}
+
+/* Issues Section */
+#issues .text-muted {
+    color: #495057 !important; /* より濃いグレー */
+}
+
+/* Benefits Section */
+.benefit-list-item {
+    position: relative;
+    padding: 20px;
+    margin-bottom: 2rem;
+    background-color: var(--bg-dark-2);
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-left: 5px solid var(--accent-color);
+}
+
+.benefit-list-item h5 {
+    font-weight: bold;
+    color: var(--text-color);
+    margin-bottom: 0.5rem;
+}
+
+.benefit-list-item p {
+    color: #ced4da; /* 明るいグレー */
+}
+
+/* Why Increase Section */
+#why-increase .lead {
+    color: var(--text-color-dark) !important;
+}
+
+/* Testimonials Section */
+.testimonial-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+}
+
+.testimonial-img {
+    width: 180px; /* さらに大きく */
+    height: 180px; /* さらに大きく */
+    object-fit: cover;
+    border: 3px solid var(--accent-color);
+}
+
+/* Speakers Section */
+#speakers .card {
+    border: none;
+    background-color: #f8f9fa;
+}
+
+#speakers .card-img-top {
+    width: 100%;
+    height: 350px; /* さらに大きく */
+    object-fit: cover;
+}
+
+/* Floating CTA Button */
+.floating-cta-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--accent-color);
+    color: var(--text-color);
+    padding: 15px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 15px rgba(30, 132, 73, 0.3);
+    z-index: 1030;
+    animation: pulse 2s infinite;
+    transition: transform 0.3s ease;
+}
+
+.floating-cta-btn:hover {
+    transform: scale(1.1);
+    animation-play-state: paused;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(30, 132, 73, 0.3);
+    }
+    50% {
+        transform: scale(1.05);
+        box-shadow: 0 8px 25px rgba(30, 132, 73, 0.5);
+    }
+    100% {
+        transform: scale(1);
+        box-shadow: 0 5px 15px rgba(30, 132, 73, 0.3);
+    }
+}
+
+/* Footer */
+footer a:hover {
+    color: var(--accent-color) !important;
+}
