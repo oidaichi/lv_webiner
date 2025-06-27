@@ -181,59 +181,7 @@ header {
     color: var(--emphasis-color) !important;
 }
 
-/* Hero Section */
-#hero {
-    background-color: #e0f7fa; /* Light blue background */
-    padding: 0; /* パディングを削除 */
-    background-image: url('img/top画像01.png'); /* 背景画像を設定 */
-    background-size: contain; /* 画像をセクション全体に表示し、切り取らない */
-    background-position: center top; /* 画像を上部に配置 */
-    background-repeat: no-repeat; /* 画像の繰り返しを防止 */
-    min-height: 700px; /* PC表示での最小高さを設定 */
-}
 
-#hero img {
-    /* 既存のimgスタイルは不要になるため削除 */
-    display: none; /* 画像を非表示にする */
-}
-
-#hero .container {
-    padding-top: 80px; /* ヘッダーの高さ分のパディングを追加 */
-}
-
-#hero h1 {
-    font-size: 4rem;
-    line-height: 1.2;
-    margin-bottom: 25px;
-}
-
-#hero .lead {
-    font-size: 1.6rem;
-    margin-bottom: 30px;
-    font-weight: 500;
-}
-
-#hero .fs-5 {
-    font-size: 1.4rem !important;
-    color: #495057;
-}
-
-@media (max-width: 767.98px) {
-    #hero {
-        padding: 0;
-        position: relative; /* Enable absolute positioning for children */
-        min-height: 70vh; /* 縦長の画像が大きく表示されるように最小高さを設定 */
-        display: flex; /* Use flexbox to center content */
-        flex-direction: column; /* Stack content vertically */
-        justify-content: center; /* Center vertically */
-        align-items: center; /* Center horizontally */
-        overflow: hidden; /* Prevent content overflow */
-    }
-
-    #hero .lead {
-        font-size: 1.2rem; /* Adjust font size for mobile */
-    }
-}
 
 
 /* Recommend Section */
@@ -350,10 +298,14 @@ header {
 }
 
 #speakers img {
-    object-fit: cover;
     margin-bottom: 25px;
-    width: 180px;
-    height: 180px;
+}
+
+.rounded-corners {
+    object-fit: contain;
+    width: 320px;
+    height: 320px;
+    border-radius: 15px; /* 角丸の半径 */
 }
 
 #speakers h4 {
@@ -381,9 +333,7 @@ header {
     padding: 30px;
 }
 
-#testimonials img {
-    object-fit: cover;
-}
+
 
 #testimonials .card-text {
     font-size: 1.1rem;
@@ -587,6 +537,11 @@ footer a:hover {
         max-width: 70%; /* ブラウザ幅の70%に制限 */
         margin: 0 auto; /* 中央寄せ */
     }
+
+    .hero-img-left,
+    .hero-img-right {
+        margin: 0; /* PCでは画像をくっつける */
+    }
 }
 
 @media (max-width: 767.98px) {
@@ -597,9 +552,8 @@ footer a:hover {
     #hero {
         padding: 0; /* 上下の隙間をなくす */
         background-color: transparent !important; /* 背景色を透明に */
-        min-height: 100vh; /* 画面全体を覆うように高さを設定 */
-        background-image: url('img/top画像01.png'); /* 背景画像を設定 */
-        background-size: 100% auto; /* 画像の幅を100%に固定し、高さを自動調整 */
+        min-height: min-content; /* コンテンツの高さに合わせて自動調整 */
+        background-image: none; /* 背景画像を削除 */
         background-position: center top; /* 画像を上部に配置 */
         background-repeat: no-repeat; /* 画像の繰り返しを防止 */
         display: flex; /* Use flexbox to center content */
@@ -609,6 +563,8 @@ footer a:hover {
         overflow: hidden; /* Prevent content overflow */
         width: 100%; /* 幅を100%に設定 */
     }
+
+    
 
     #hero .container {
         width: 100%;
@@ -633,9 +589,9 @@ footer a:hover {
         font-size: 1rem;
     }
 
-    #speakers img {
-        width: 140px;
-        height: 140px;
+    .rounded-corners {
+        width: 280px;
+        height: 280px;
     }
 
     #speakers h4 {
