@@ -87,22 +87,41 @@ h2 {
 }
 
 /* Buttons */
-.btn-primary {
+.btn-primary, .btn-light {
     background: linear-gradient(45deg, #008B8B, #00008B);
     border: 2px solid #008B8B;
-    padding: 1.2rem 3.5rem;
+    padding: 1.2rem 4.5rem 1.2rem 2.5rem;
     font-size: 1.5rem;
     font-weight: 900;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 50px;
     transition: all 0.3s ease;
-    box-shadow: 0 0 20px #008B8B, inset 0 0 10px #00008B;
-    animation: pulse-animation 1.5s ease-in-out infinite;
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-decoration: none !important;
+    animation: float-animation 3s ease-in-out infinite;
 }
 
-.btn-primary:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px #008B8B, inset 0 0 15px #00008B;
+.btn-primary:hover, .btn-light:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px #008B8B;
+    color: #fff;
+}
+
+.btn-text {
+    display: inline-block;
+    padding-right: 2rem; /* Add space between text and arrow */
+}
+
+.btn-arrow {
+    position: absolute;
+    right: 2rem;
+    font-weight: bold;
+    font-size: 1.5em;
+    line-height: 1;
 }
 
 .btn-outline-primary {
@@ -122,20 +141,11 @@ h2 {
 }
 
 .btn-light {
-    color: #fff;
-    background: linear-gradient(45deg, #008B8B, #00008B);
-    border: 2px solid #008B8B;
-    font-size: 1.5rem;
-    padding: 1.2rem 3.5rem;
-    font-weight: 900;
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    animation: pulse-animation 1.5s ease-in-out infinite;
+    /* Styles are now merged with .btn-primary */
 }
 
 .btn-light:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 30px #008B8B;
+    /* Styles are now merged with .btn-primary:hover */
 }
 
 /* Animations */
@@ -147,7 +157,7 @@ h2 {
 
 @keyframes float-animation {
     0% { transform: translateY(0px); }
-    50% { transform: translateY(-15px); }
+    50% { transform: translateY(-5px); }
     100% { transform: translateY(0px); }
 }
 
@@ -161,6 +171,14 @@ h2 {
 
 section {
     padding: 100px 0;
+}
+
+#hero {
+    padding-top: 0;
+}
+
+#hero .container {
+    padding-top: 0;
 }
 
 /* Header */
