@@ -88,8 +88,8 @@ h2 {
 
 /* Buttons */
 .btn-primary, .btn-light {
-    background: linear-gradient(45deg, #008B8B, #00008B);
-    border: 2px solid #008B8B;
+    background: linear-gradient(45deg, #28a745, #6495ED);
+    border: none;
     padding: 1.2rem 4.5rem 1.2rem 2.5rem;
     font-size: 1.5rem;
     font-weight: 900;
@@ -103,11 +103,12 @@ h2 {
     text-align: center;
     text-decoration: none !important;
     animation: float-animation 3s ease-in-out infinite;
+    box-shadow: 0 0 0 2px #28a745, 0 0 0 4px #6495ED;
 }
 
 .btn-primary:hover, .btn-light:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 30px #008B8B;
+    box-shadow: 0 0 30px #28a745;
     color: #fff;
 }
 
@@ -322,7 +323,6 @@ header {
     margin-right: 20px;
     color: var(--primary-color);
     flex-shrink: 0;
-    margin-top: 8px;
     text-shadow: 0 0 5px var(--primary-color);
 }
 
@@ -330,6 +330,60 @@ header {
     font-size: 1rem;
     line-height: 1.5;
     color: #ccc;
+}
+
+#course-content .card {
+    background-color: var(--dark-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    color: var(--light-text);
+}
+
+#course-content .card-body {
+    padding: 2rem;
+}
+
+#course-content .card-text {
+    color: var(--light-text);
+}
+
+#course-content .card h4 {
+    color: var(--primary-color);
+}
+
+#course-content .course-item {
+    background-color: var(--light-bg); /* Slightly lighter background for items */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px; /* Add space between items */
+}
+
+#course-content .course-header {
+    margin-bottom: 10px;
+}
+
+#course-content .course-number {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--primary-color);
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+#course-content .course-icon i {
+    font-size: 2rem;
+    color: var(--primary-color);
+    flex-shrink: 0;
+}
+
+#course-content .course-text h4 {
+    color: var(--primary-color);
+    margin-bottom: 0;
+}
+
+#course-content .course-description {
+    color: var(--light-text);
+    margin-bottom: 0;
 }
 
 /* Speakers Section */
@@ -528,19 +582,17 @@ header {
 
 #cta-bottom .btn-light {
     color: #fff;
-    background: linear-gradient(45deg, #008B8B, #00008B);
-    border: 2px solid #008B8B;
-    font-size: 1.6rem;
-    padding: 1.5rem 4rem;
+    background: linear-gradient(45deg, #28a745, #6495ED);
+    border: none;
     font-weight: 900;
-    border-radius: 10px;
     transition: all 0.3s ease;
     animation: pulse-animation 1.5s ease-in-out infinite;
+    box-shadow: 0 0 0 2px #28a745, 0 0 0 4px #6495ED;
 }
 
 #cta-bottom .btn-light:hover {
     transform: scale(1.1);
-    box-shadow: 0 0 30px #008B8B;
+    box-shadow: 0 0 30px #28a745;
 }
 
 /* Footer */
